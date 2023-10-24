@@ -1,0 +1,61 @@
+<!-- <section class="total_caloies">
+    <div class="over_lay">
+      <form class="form_info" [formGroup]="Data" (ngSubmit)="Calculate()">
+        <div class="proson_info">
+          <div class="input_style">
+            <label for="">weight(kg)</label>
+            <input formControlName="weight" type="number" />
+          </div>
+          <div class="input_style">
+            <label for="">height(cm)</label>
+            <input formControlName="height" type="number" />
+          </div>
+      
+        </div>
+        <div class="btn_container">
+          <button type="submit">Calculate</button>
+        </div>
+      </form>
+    </div>
+    <div class="">
+
+    </div>
+  </section>
+   -->
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7 ms-auto order-2">
+        <form class="form_info" [formGroup]="Data" (ngSubmit)="Calculate()">
+          <div class="proson_info">
+            <div class="input_style">
+              <label for="">weight(kg)</label>
+              <input formControlName="weight" type="number" />
+            </div>
+            <div class="input_style">
+              <label for="">height(cm)</label>
+              <input formControlName="height" type="number" />
+            </div>
+          </div>
+          <div class="btn_container">
+            <button class="btn btn-primary" type="submit">Calculate</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-5" data-aos="fade-right">
+        <img src="assets/img/3683289.jpg" alt="Image" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</section>
+<p-dialog
+  [(visible)]="visible"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <h3 class="text-center mt-2 mb-5">your BMI : {{ BMI | number : "1.0-0" }}</h3>
+  <h5 class="text-center">Weight Status</h5>
+  <p class="text-center fw-500">{{ value }}</p>
+</p-dialog>

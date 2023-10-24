@@ -1,0 +1,83 @@
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-5 me-auto">
+        <form
+          class="form_info"
+          [formGroup]="Data"
+          (ngSubmit)="calculateBodyFatPercentage()"
+        >
+          <div class="proson_info">
+            <div class="input_style">
+              <label for="">weight(kg)</label>
+              <input formControlName="weight" type="number" />
+            </div>
+            <div class="input_style">
+              <label for="">height(cm)</label>
+              <input formControlName="height" type="number" />
+            </div>
+            <div class="input_style">
+              <label for="">waist (cm)</label>
+              <input formControlName="waist" type="number" />
+            </div>
+            <div class="input_style">
+              <label for="">hip (cm)</label>
+              <input formControlName="hip" type="number" />
+            </div>
+            <div class="input_style">
+              <label for="">neck (cm)</label>
+              <input formControlName="hip" type="number" />
+            </div>
+          </div>
+
+          <div class="gender_">
+            <h4>Geander</h4>
+            <div class="gender_container">
+              <div class="input_style">
+                <label for="">Man</label>
+                <input
+                  formControlName="Geander"
+                  type="radio"
+                  name="gender"
+                  value="Man"
+                />
+              </div>
+              <div class="input_style">
+                <label for="">Woman</label>
+                <input
+                  formControlName="Geander"
+                  type="radio"
+                  name="gender"
+                  value="Woman"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_container">
+            <button class="btn btn-primary" type="submit">Calculate</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <img
+          src="assets/img/how-to-take-your-measurements-body-fat-calculator.png"
+          alt="Image"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<p-dialog
+[(visible)]="visible"
+[modal]="true"
+[style]="{ width: '50vw' }"
+[draggable]="false"
+[resizable]="false"
+>
+<h1 class="text-center mt-2 mb-5">
+   {{ bfp | number : "1.0-0" }} %
+</h1>
+</p-dialog>

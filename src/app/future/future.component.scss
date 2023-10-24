@@ -1,0 +1,28 @@
+#main {
+  overflow: hidden;
+}
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+.section {
+  .container {
+    .section_title {
+      font-family: 900 !important;
+     font-size: 2.5rem;
+     
+    }
+    .section_desc{
+        font-size: 1rem;
+
+    }
+  }
+}
+.btn.btn-primary {
+    background: #2d71a1;
+    background: linear-gradient(-45deg, #1391a5, #274685);
+    color: #fff;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+    border: #1391a5 solid 1px;
+    padding: .5rem 1.5rem;
+}

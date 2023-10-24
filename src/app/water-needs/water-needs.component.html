@@ -1,0 +1,39 @@
+<section class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-5 ms-auto order-2">
+            <form class="form_info" [formGroup]="Data" (ngSubmit)="Calculate()">
+                <div class="proson_info">
+                  <div class="input_style">
+                    <label for="">weight(kg)</label>
+                    <input formControlName="weight" type="number" />
+                  </div>
+             
+                </div>
+                <div class="btn_container">
+                  <button class="btn btn-primary" type="submit">Calculate</button>
+                </div>
+              </form>
+
+        </div>
+        <div class="col-md-6" data-aos="fade-right">
+          <img
+            src="assets/img/istockphoto-1278020114-612x612.jpg"
+            alt="Image"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <p-dialog
+[(visible)]="visible"
+[modal]="true"
+[style]="{ width: '50vw' }"
+[draggable]="false"
+[resizable]="false"
+>
+<h1 class="text-center mt-2 mb-5">
+   {{ waterIntakeLiters }} L
+</h1>
+</p-dialog>

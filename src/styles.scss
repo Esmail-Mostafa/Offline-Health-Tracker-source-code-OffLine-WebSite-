@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .btn.btn-primary {
+    background: #2d71a1;
+    background: linear-gradient(-45deg, #1391a5, #274685);
+    color: #fff;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+    border: #1391a5 solid 1px;
+    padding: .5rem 1.5rem;
+}
+
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import 'aos/dist/aos.css'; // You can also use <link> for styles
